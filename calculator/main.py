@@ -81,7 +81,7 @@ class Calculator:
             elif self.stored_op == "/":
                 self.acc = self.acc / self.disp
             elif self.stored_op == "-":
-                self.acc = self.acc + self.disp
+                self.acc = self.acc - self.disp
             elif self.stored_op == "%":
                 self.acc = self.acc % self.disp
             elif self.stored_op == "=":

@@ -46,10 +46,10 @@ class Calculator:
         COLUMNS = 4
         # Create buttons
         for index, button_name in enumerate([
-            "0", "1", "2", "3",
-            "4", "5", "6", "7",
-            "8", "9", "+", "-",
-            "*", "/", "%", "=" ]):
+            "1", "2", "3", "+",
+            "4", "5", "6", "-",
+            "7", "8", "9", "*",
+            "0", "%", "=", "/" ]):
             button = self.makeButton(button_name)
             button.button.grid(column = index % COLUMNS, row = index // COLUMNS + 1)
         print("Compsoc calculator")

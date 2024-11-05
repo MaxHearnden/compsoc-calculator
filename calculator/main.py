@@ -61,7 +61,7 @@ class Calculator:
 
     # Show the accumulator
     def display_acc(self):
-        self.display["text"] = str(self.acc)
+        self.display["text"] = "IDK"
 
     # Handle number button press
     def handle_digit(self, digit):

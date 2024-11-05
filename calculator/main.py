@@ -49,7 +49,7 @@ class Calculator:
             "0", "1", "2", "3",
             "4", "5", "6", "7",
             "8", "9", "+", "-",
-            "*", "/", "%", "=" ]):
+            "*", "/", "%", "=", "C" ]):
             button = self.makeButton(button_name)
             button.button.grid(column = index % COLUMNS, row = index // COLUMNS + 1)
         print("Compsoc calculator")
@@ -86,6 +86,10 @@ class Calculator:
                 self.acc = self.acc % self.disp
             elif self.stored_op == "=":
                 self.acc = self.disp
+            elif self.stored_op == "C":
+                self.stored_op = None
+                self.disp = 0
+                self.acc = 0
             # Clear the display register
             self.disp = 0
             # Show the accumulator

@@ -7,6 +7,8 @@
 
 from tkinter import *
 from tkinter import ttk
+from random import randrange
+dialogue = ["Ask someone else", "I don't know", "Let me sleep on it", "Somewhere between 0-100","I know it but I won't tell you"]
 
 class IntButton:
     def __init__(self, calculator, name):
@@ -37,7 +39,7 @@ class Calculator:
         self.stored_op = None
 
         # Create a new window
-        self.window = ttk.Frame(root, padding = 10)
+        self.window = ttk.Frame(root, padding = 100)
         # Use the grid geometry manager
         self.window.grid()
         # Attach the display to the top of the grid
@@ -51,7 +53,7 @@ class Calculator:
             "8", "9", "+", "-",
             "*", "/", "%", "=" ]):
             button = self.makeButton(button_name)
-            button.button.grid(column = index % COLUMNS, row = index // COLUMNS + 1)
+            button.button.grid(column = index % COLUMNS, row = index // COLUMNS + 5)
         print("Compsoc calculator")
 
     # Show the display register
@@ -61,7 +63,7 @@ class Calculator:
 
     # Show the accumulator
     def display_acc(self):
-        self.display["text"] = "I don't know"
+        self.display["text"] = dialogue[randrange(5)]
 
     # Handle number button press
     def handle_digit(self, digit):
